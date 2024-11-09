@@ -55,3 +55,6 @@ trace.json
 /test/results.xml
 coverage.xml
 **/tests/**/expectations
+files-container/Stable-diffusion/Não confirmado 859337.crdownload
+files-container/diffusers/version_diffusers_cache.txt
+files-container/diffusers/version.txt
