@@ -1,0 +1,23 @@
+services:
+  stable-diffusion-webui:
+    image: docker-forge-webui
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
+      - TZ=America/Sao_Paulo
+    command: ["bash", "/app/webui.sh"]
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

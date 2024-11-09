@@ -26,6 +26,10 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Instalar google-perftools sem recomendações
+RUN apt-get update && apt-get install -y --no-install-recommends google-perftools && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Atualizar pip e setuptools
 RUN python3.10 -m pip install --upgrade pip setuptools
@@ -54,6 +58,3 @@ RUN bash /app/webui.sh || echo "webui.sh execution completed with non-fatal issu
 
 # Mudar para o usuário não-root
 USER nonrootuser
-
-# Comando de inicialização
-CMD ["bash", "/app/webui.sh", "--host", "0.0.0.0"]
