@@ -1,4 +1,4 @@
-# README for Docker Stable Diffusion WebUI Forge
+# Docker Stable Diffusion WebUI Forge
 
 ## Dockerized Stable Diffusion WebUI Forge
 
