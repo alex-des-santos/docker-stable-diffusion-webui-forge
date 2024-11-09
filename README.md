@@ -108,4 +108,3 @@ Developed by [Alex dos Santos](https://github.com/alex-des-santos).
 
 ---
 
-This README provides clear instructions and configuration details for running the Dockerized Stable Diffusion WebUI Forge project seamlessly.
